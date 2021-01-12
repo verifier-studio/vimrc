@@ -16,7 +16,7 @@ set showtabline=0
 " 背景透明
 " autocmd guienter * call libcallnr("vimtweak.dll", "SetAlpha",222)
 " 全屏
-" map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
+map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
 endif
 
 " 插件
@@ -58,6 +58,16 @@ set nowrap
 set backspace=indent,eol,start
 set shiftwidth=4
 
+set smarttab
+
+" tab字符替换成4个空格
+set expandtab
+set tabstop=4
+
+" 自动缩进
+set autoindent
+set smartindent
+
 " 搜索高亮显示
 set hlsearch
 
@@ -78,4 +88,4 @@ set belloff=all
 
 " 设置字体
 " set guifont=ProFontWindows\ Nerd\ Font:h14
-set guifontwide=黑体:h13
+" set guifontwide=黑体:h13
