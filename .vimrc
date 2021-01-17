@@ -1,3 +1,6 @@
+" 关闭vi兼容
+set nocompatible
+
 " 更改菜单和提示语言为英语
 set langmenu=en_US
 let $LANG = 'en_US'
@@ -13,8 +16,11 @@ set guioptions-=L
 set guioptions-=b
 set showtabline=0
 
+" 设置初始窗口大小
+set lines=36 columns=110
+
 " 背景透明
-" autocmd guienter * call libcallnr("vimtweak.dll", "SetAlpha",222)
+autocmd guienter * call libcallnr("vimtweak.dll", "SetAlpha",222)
 " 全屏
 map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
 endif
@@ -22,7 +28,8 @@ endif
 " 插件
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " F2 文件目录
@@ -33,7 +40,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 
 " 默认进入目录
-cd E:\workspace
+cd C:\workspace
 
 " F3 内置terminal
 map <F3> :ter<CR>
@@ -48,7 +55,8 @@ set number
 syntax on
 syntax enable
 set t_Co=256
-colorscheme murphy
+" colorscheme murphy
+colorscheme onedark
 
 " 根据打开文件切换对应路径
 set autochdir
@@ -87,5 +95,5 @@ inoremap <C-d> <DELETE>
 set belloff=all
 
 " 设置字体
-" set guifont=ProFontWindows\ Nerd\ Font:h14
-" set guifontwide=黑体:h13
+set guifont=ProFontWindows\ Nerd\ Font:h14
+set guifontwide=黑体:h12
