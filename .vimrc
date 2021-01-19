@@ -56,7 +56,7 @@ if has('gui_running')
 	" 背景透明
 	" autocmd guienter * call libcallnr('vimtweak.dll', 'SetAlpha', 222)
 	" 全屏
-	map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
+	" map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
 
 	" F2 文件目录
 	map <F2> :NERDTreeToggle<CR>
