@@ -65,7 +65,6 @@ if has('gui_running')
 
 	" F3 内置terminal
 	map <F3> :ter<CR>
-	tnoremap <c-N> <c-\><c-n> " 内置终端模式切换
 
 	" 插入模式光标移动配置
 	inoremap <C-h> <Left>
