@@ -1,3 +1,11 @@
+" 关闭vi兼容
+set nocompatible
+
+" 解决中文乱码
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,gbk,latin1
+
 if has('gui_running') 
 	" 隐藏菜单栏
 	set guioptions-=m
@@ -13,18 +21,10 @@ if has('gui_running')
 	source $VIMRUNTIME/delmenu.vim
 	source $VIMRUNTIME/menu.vim
 
-	" 解决中文乱码
-	set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-	set termencoding=utf-8
-	set encoding=utf-8
-
 	" 设置窗口位置
 	winpos 160 20
 	" 设置初始窗口大小
 	set lines=40 columns=110
-
-	" 关闭vi兼容
-	set nocompatible
 
 	" 默认进入目录
 	cd E:\workspace
