@@ -24,3 +24,8 @@
 - :clapper: .dll（可选，安装后，需要在.vimrc中打开注释项）
 
 两个`.dll`文件（全屏、透明背景）放置在`vim`安装目录下（默认安装路径为`C:\Program Files (x86)\Vim\vim82\`）
+
+# windows neovim配置
+- 在`~\AppData\Local\`目录下新建`nvim`目录，并在`nvim`下新建`autoload`、`plugged`目录
+- 下载`plug.vim`放在`autoload`目录下
+- 将配置文件`init.vim`放置在`nvim`目录下
