@@ -30,7 +30,7 @@ if has('gui_running')
 	cd E:\workspace
 
 	" 禁用vim-polyglot插件编辑文件
-	let g:polyglot_disabled = ['ftdetect']
+	" let g:polyglot_disabled = ['ftdetect']
 
 	" 插件
 	call plug#begin('~/.vim/plugged')
@@ -39,7 +39,23 @@ if has('gui_running')
 	Plug 'joshdick/onedark.vim'
 	Plug 'NLKNguyen/papercolor-theme'
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'skywind3000/vim-terminal-help'
+	Plug 'vim-airline/vim-airline'
 	call plug#end()
+
+    " let g:airline_powerline_fonts = 1
+    " let g:airline_theme='wombat'
+    let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#buffer_nr_show = 1
+	let g:airline#extensions#whitespace#enabled = 0
+    let g:airline#extensions#whitespace#symbol = '!'
+	let g:airline_section_z=''
+    " let g:airline_enabled=0
+
+	" 设置切换Buffer快捷键
+    nnoremap <C-N> :bn<CR>
+    nnoremap <C-P> :bp<CR>
+	nnoremap <C-C> :bd<CR>
 
 	" 颜色主题
 	syntax on
@@ -50,8 +66,8 @@ if has('gui_running')
 
 	" 设置字体（推荐Consolas 字体下载地址 https://www.nerdfonts.com/font-downloads）
 	" set guifont=ProFontWindows\ Nerd\ Font:h14
-	set guifont=ProFontIIx\ Nerd\ Font\ Mono:h9
-	set guifontwide=SimSun-ExtB:h12
+	set guifont=Consolas:h11
+	" set guifontwide=SimSun-ExtB:h12
 
 	" 背景透明
 	" autocmd guienter * call libcallnr('vimtweak.dll', 'SetAlpha', 222)
