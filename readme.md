@@ -29,3 +29,6 @@
 - 在`~\AppData\Local\`目录下新建`nvim`目录，并在`nvim`下新建`autoload`、`plugged`目录
 - 下载`plug.vim`放在`autoload`目录下
 - 将配置文件`init.vim`放置在`nvim`目录下
+
+# 精简配置
+- 直接将`vimfiles`文件夹复制到用户目录下（e.g. `C:\Users\Administrator`）即可
