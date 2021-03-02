@@ -1,3 +1,6 @@
+" 默认进入目录
+cd E:\workspace
+
 " 关闭vi兼容
 set nocompatible
 
@@ -23,13 +26,17 @@ if has('gui_running')
 	source $VIMRUNTIME/menu.vim
 
 	" 设置窗口位置
-	winpos 160 20
+	winpos 190 24
 	" 设置初始窗口大小
 	set lines=32 columns=110
-endif
 
-" 默认进入目录
-cd E:\workspace
+	" 背景透明
+	" autocmd guienter * call libcallnr('vimtweak.dll', 'SetAlpha', 222)
+	" 全屏
+	map <F11> :call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
+	" 还原初始窗口
+	map <F12> :set lines=32 columns=110 <Bar> winpos 190 24<CR>
+endif
 
 " 插件
 call plug#begin('~/vimfiles/plugged')
@@ -51,7 +58,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " nnoremap <tab> :bn<CR> " 下一个
 " nnoremap <s-tab> :bp<CR> " 上一个
 nnoremap <C-C> :bd<CR> " 关闭当前
-
+" 切换buffer快捷键（airline提供的方法，可以忽略内置terminal）
 nmap <s-tab> <Plug>AirlineSelectPrevTab
 nmap <tab> <Plug>AirlineSelectNextTab
 
@@ -59,17 +66,12 @@ nmap <tab> <Plug>AirlineSelectNextTab
 syntax on
 syntax enable
 set t_Co=256
-" 可选主题 murphy dracula onedark PaperColor
+" 可选主题
 colorscheme onedark
 
 " 设置字体
 set guifont=Consolas:h11
 " set guifontwide=SimSun-ExtB:h12 " 单独设置中文字体
-
-" 背景透明
-" autocmd guienter * call libcallnr('vimtweak.dll', 'SetAlpha', 222)
-" 全屏
-map <F11> <Esc>:call libcallnr('gvimfullscreen.dll', 'ToggleFullScreen', 0)<CR>
 
 " F2 文件目录
 map <F2> :NERDTreeToggle<CR>
@@ -88,6 +90,8 @@ inoremap <C-d> <DELETE>
 
 " 共享剪贴板
 set clipboard+=unnamed
+" 设置terminal粘贴系统剪贴板快捷键 alt + 0
+tnoremap <m-0> <c-_>"*
 
 " 搜索高亮显示
 set hlsearch
