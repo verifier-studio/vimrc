@@ -3,7 +3,7 @@ cd E:\workspace
 
 " 关闭vi兼容
 set nocompatible
-
+           
 " 解决中文乱码
 set encoding=utf-8
 set termencoding=utf-8
@@ -49,10 +49,11 @@ call plug#end()
 " airline配置
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_section_z=''
-let g:airline_section_error=''
-let g:airline_section_warning=''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_section_z=''           " 隐藏倒数第二行显示的内容
+let g:airline_section_error=''       " 隐藏倒数第一行显示的内容
+let g:airline_section_warning=''     " 隐藏倒数第一行显示的内容
+let g:airline_symbols_ascii = 1      " 隐藏图标
 
 " 切换buffer快捷键
 " nnoremap <tab> :bn<CR> " 下一个
