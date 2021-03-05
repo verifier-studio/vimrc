@@ -78,6 +78,7 @@ set guifont=Consolas:h11
 map <F2> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1 " 目录中显示隐藏文件
+let g:NERDTreeMinimalUI=1
 
 " F3 内置terminal
 map <F3> :ter<CR>
