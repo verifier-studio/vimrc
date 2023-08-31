@@ -1,0 +1,1 @@
+nnoremap <silent> <F11> :call GuiWindowFullScreen((g:GuiWindowFullScreen + 1) % 2)<cr>
